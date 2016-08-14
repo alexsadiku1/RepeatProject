@@ -106,6 +106,7 @@ if(!isset($_SESSION['customer_email'])){
 <h1>Contact Us at</h1>
 <h2>Email: asadiku1@hotmail.com</h2>
 <h2>Phone: 0852838598</h2>
+<!--Link to Mock facebook-->
 <a href="https://www.facebook.com/1stop-1139041116152396/?skip_nax_wizard=true">
 <img border="0" width="50" height="50" alt="Facebook" src="images/facebook.jpg" width="100" height="100">
 </a>
