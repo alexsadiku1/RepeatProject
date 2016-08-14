@@ -1,6 +1,6 @@
 <?php
-session_start();
-include("functions/functions.php");
+session_start();//function to start the sessions
+include("functions/functions.php");//includes the functions from the functions
 
 
 
@@ -59,7 +59,9 @@ include("functions/functions.php");
 
 <ul id ="filters">
 
-<?php getCats();?>
+<?php
+//function called from functions file to retrieve categories
+getCats();?>
 
 
 <ul>
@@ -106,13 +108,15 @@ if(!isset($_SESSION['customer_email'])){
 
 <div id="products_area">
 <?php
-
+	//sql command
 	$get_products = "select * from products";
-	
+	//sql query that will be run(parameter 1 is the connection to the data base and parameter 2 is the query command)
 	$run_products = mysqli_query($con, $get_products);
 	
+	//will run the query depending on the amount of items
 	while($row_pro= mysqli_fetch_array($run_products)){
 		
+		//variables are being assigned
 		$pro_id = $row_pro['product_ID'];
 		$pro_cat = $row_pro['product_cat'];
 		$pro_name = $row_pro['product_name'];
