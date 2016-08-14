@@ -59,12 +59,13 @@ if(isset($_POST['login'])){
  
     return $c_ip;
 }
-        
+        //connection to database
    $mysql_host = "fdb12.atspace.me";
 $mysql_database = "2173748_alex";
 $mysql_user = "2173748_alex";
 $mysql_password = "Alexander1";
 
+//connection variable with all parameters
 $con = mysqli_connect($mysql_host, $mysql_user, $mysql_password,$mysql_database)or die(mysql_error());
         
 	$c_email = $_POST['email'];
