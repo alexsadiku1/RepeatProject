@@ -84,6 +84,7 @@ include_once("functions/functions.php");
 
 <span style="float:right; font-size:18px; padding:5px; line-height:40px;">
 <?php
+//used to get the specific person logged in during the session
 if(isset($_SESSION['customer_email'])){
 	
 	echo"<b>Welcome: </b>". $_SESSION['customer_email'];
@@ -130,7 +131,8 @@ if(!isset($_SESSION['customer_email'])){
 </tr>
 
 <?php
-
+//used to get IP address as to difrentiate carts.
+//retrieved from http://stackoverflow.com/questions/3003145/how-to-get-the-client-ip-address-in-php
         function getIp() {
     $c_ip = $_SERVER['REMOTE_ADDR'];
  
@@ -149,7 +151,7 @@ $total = 0;
 	global $con;
 
    $ip=getIp();
-   
+   //gets the items from cart using the persons IP address
    $sel_price = "select * from cart where ip_add='$ip'";
    
    $run_price = mysqli_query($con, $sel_price);
@@ -272,7 +274,7 @@ if(isset($_POST['continue'])){
 	echo "<script>window.open('index.php','_self')</script>";
 }
 
-//if function isn't selected it won't generate an error
+
 
 
 ?>
